@@ -7,7 +7,7 @@ if (
 ) {
   API_URL = `${process.env.REACT_APP_API_URL_PRODUCTION}`;
 } else {
-  API_URL = `${process.env.REACT_APP_API_URL_DEVELOPMENT}`;
+  API_URL = `${window.location.origin}`;
 }
 
 export const getCredentials = async (roomName) => {
