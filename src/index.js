@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '@lyyti/design-system/styles/objektiv.css';
 
 ReactDOM.render(
   <React.StrictMode>

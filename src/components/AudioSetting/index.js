@@ -1,4 +1,5 @@
 import React from 'react';
+import '@lyyti/design-system/styles/objektiv.css';
 
 import Mic from '@material-ui/icons/Mic';
 import Switch from '@material-ui/core/Switch';
