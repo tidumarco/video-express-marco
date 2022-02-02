@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { blueGrey } from '@material-ui/core/colors';
 import { Height } from '@material-ui/icons';
+import '@lyyti/design-system/styles/objektiv.css';
 export default makeStyles((theme) => ({
   waitingRoomContainer: {
     position: 'absolute',

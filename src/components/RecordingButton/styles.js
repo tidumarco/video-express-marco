@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import '@lyyti/design-system/styles/objektiv.css';
 export default makeStyles((theme) => ({
   activeRecordingIcon: {
     boxShadow: '0 0 0 0 rgba(213, 15, 45, 1)',

@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import '@lyyti/design-system/styles/objektiv.css';
 export default makeStyles(theme => ({
   banner: {
     zIndex: 1,

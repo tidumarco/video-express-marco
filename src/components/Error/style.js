@@ -1,0 +1,1 @@
+import '@lyyti/design-system/styles/objektiv.css';
