@@ -371,7 +371,7 @@ export default function WaitingRoom({ location }) {
               control={
                 <Checkbox
                   checked={backgroundBlur}
-                  onChange={handleChangeBackgroundBlur}
+                  // onChange={handleChangeBackgroundBlur}
                 />
               }
               label="Background Blur"
