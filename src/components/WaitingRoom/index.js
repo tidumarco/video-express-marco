@@ -24,7 +24,7 @@ import * as VideoEffects from '@vonage/video-effects';
 
 export default function WaitingRoom({ location }) {
   const track = useRef(null);
-  const { BackgroundBlurEffect } = VideoEffects;
+  // const { BackgroundBlurEffect } = VideoEffects;
   const { stopEffect, startBackgroundBlur, isSupported } = useBackgroundBlur();
   const classes = useStyles();
   const { push } = useHistory();
@@ -147,33 +147,33 @@ export default function WaitingRoom({ location }) {
     setLocalVideo(e.target.checked);
   }, []);
 
-  const handleChangeBackgroundBlur = React.useCallback(async () => {
-    try {
-      if (backgroundBlur) {
-        setBackgroundBlur(false);
-        destroyPreview();
-        stopEffect();
-        createPreview(waitingRoomVideoContainer.current);
-      } else {
-        setBackgroundBlur(true);
-        destroyPreview();
-        const outputVideoStream = await startBackgroundBlur();
-        console.log(outputVideoStream);
-        // await backgroundBlurObject.loadModel();
-        createPreview(waitingRoomVideoContainer.current, {
-          videoSource: outputVideoStream.getVideoTracks()[0]
-        });
-      }
-    } catch (e) {
-      console.log(`Could not send background blurring - ${e}`);
-    }
-  }, [
-    backgroundBlur,
-    createPreview,
-    destroyPreview,
-    stopEffect,
-    startBackgroundBlur
-  ]);
+  // const handleChangeBackgroundBlur = React.useCallback(async () => {
+  //   try {
+  //     if (backgroundBlur) {
+  //       setBackgroundBlur(false);
+  //       destroyPreview();
+  //       stopEffect();
+  //       createPreview(waitingRoomVideoContainer.current);
+  //     } else {
+  //       setBackgroundBlur(true);
+  //       destroyPreview();
+  //       const outputVideoStream = await startBackgroundBlur();
+  //       console.log(outputVideoStream);
+  //       // await backgroundBlurObject.loadModel();
+  //       createPreview(waitingRoomVideoContainer.current, {
+  //         videoSource: outputVideoStream.getVideoTracks()[0]
+  //       });
+  //     }
+  //   } catch (e) {
+  //     console.log(`Could not send background blurring - ${e}`);
+  //   }
+  // }, [
+  //   backgroundBlur,
+  //   createPreview,
+  //   destroyPreview,
+  //   stopEffect,
+  //   startBackgroundBlur
+  // ]);
 
   useEffect(() => {
     redirectHttps();
@@ -259,10 +259,10 @@ export default function WaitingRoom({ location }) {
     }
 
     return () => {
-      stopEffect();
+      // stopEffect();
       destroyPreview();
     };
-  }, [createPreview, destroyPreview, stopEffect]);
+  }, [createPreview, destroyPreview]);
 
   return (
     <>

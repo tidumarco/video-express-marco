@@ -150,7 +150,7 @@ export default function ToolBar({
         cameraPublishing={cameraPublishing}
         changeVideoSource={changeVideoSource}
       />
-      <RecordingButton room={room} classes={classes} />
+      {/* <RecordingButton room={room} classes={classes} /> */}
       <ScreenSharingButton
         isScreenSharing={isScreenSharing}
         startScreenSharing={startScreenSharing}
