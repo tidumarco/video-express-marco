@@ -1,5 +1,4 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import '@lyyti/design-system/styles/objektiv.css';
 export default makeStyles((theme: Theme) =>
   createStyles({
     wrapForm: {
